@@ -2,108 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <!--Tailwind link-->
-    <link href="
-https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
-" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+  <!-- Tailwind CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <!--Responsive NAVBAR-->
-  <nav class="bg-green-100 p-2 flex items-center space justify-between shadow-2xl sticky top-0 z-10">
+  <!-- Responsive NAVBAR -->
+  <nav class="bg-green-100 p-2 flex items-center justify-between shadow-2xl sticky top-0 z-10">
     <h1 class="text-2xl">GREENDEN</h1>
 
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-      class="w-7 h-7 md:hidden">
+    <!-- Hamburger Menu -->
+    <svg id="bar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" class="w-7 h-7 md:hidden cursor-pointer">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
 
-
-    <ul class="flex gap-5 text-gray-600  hidden md:flex">
-      <li>
-        <a class="hover:underline hover:text-black" href="./index.html">Home</a>
-      </li>
-      <li>
-        <a class="hover:underline  hover:text-black" href="./Products.html">Products</a>
-      </li>
-      <li>
-        <a class="hover:underline  hover:text-black" href="./contact.html">Contact</a>
-      </li>
-
+    <!-- Desktop Menu -->
+    <ul class="flex gap-5 text-gray-600 hidden md:flex">
+      <li><a class="hover:underline hover:text-black" href="./index.html">Home</a></li>
+      <li><a class="hover:underline hover:text-black" href="./Products.html">Products</a></li>
+      <li><a class="hover:underline hover:text-black" href="./contact.html">Contact</a></li>
     </ul>
-
-
   </nav>
 
+  <!-- Side Navbar -->
+  <section id="sidenav" class="bg-green-200 fixed z-20 top-0 transition-all duration-1000"
+    style="width: 50%; height: 100vh; right: -50%;">
+    <div class="text-right p-5">
+      <p id="close-nav" class="inline cursor-pointer">X</p>
+    </div>
+    <ul class="flex flex-col gap-10 items-center text-gray-600">
+      <li><a class="hover:underline hover:text-black" href="#">Home</a></li>
+      <li><a class="hover:underline hover:text-black" href="./Products.html">Products</a></li>
+      <li><a class="hover:underline hover:text-black" href="./contact.html">Contact</a></li>
+    </ul>
+  </section>
 
-    <!--Product page-->
-    <section>
-        <div class="text-center">
-            <h1 class="font-bold text-3xl mt-10 ">Our Products</h1>
-            <input class="border border-black rounded-lg h-10 mt-5 " type="text" style="width: 80%;"
-                placeholder="Search for the product....... ">
-        </div>
-    </section>
-    <!--images showcase-->
-    <section>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 p-5 text-center">
-            <div>
-                <img  class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/2.jpg">
-                <p>Lily pot</p>
-                <p>₹143</p>
-            </div>
-            <div> 
-                <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/3.jpg">
-                <p>Snack plant</p>
-                <p>₹111</p>
-            </div>
-            <div>
-                <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/6.jpg">
-                <p>money plant</p>
-                <p>₹170</p>
-            </div>
-            <div>
-                <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/5.jpg">
-                <p>spider plant</p>
-                <p>₹199</p>
-            </div>
-            <div>
-                <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mt-5 mb-5" src="./images/7.jpg">
-                <p>Marigold plant</p>
-                <p>₹190</p>
-            </div>
+  <!-- Product Showcase -->
+  <section class="p-4 text-center">
+    <h1 class="font-bold text-4xl mt-10">Our Products</h1>
+    <input id="search" class="border border-black rounded-lg h-10 mt-5 w-4/5 container" type="text"
+      placeholder="Search for the product.......">
+      
+     <!-- <section class="p-4 text-center">
+        <section class="p-4 text-center">
+          <h1 class="font-bold text-3xl mt-10">Our Products</h1>
+        <input id="search" type="text" class="border border-black p-1 m-2 container" placeholder="Search for a Product..." style="width: 80%;">
+        -->
 
-            <div>
-                <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mt-5 mb-5" src="./images/8.jpg">
-                <p>Hibiscus plant</p>
-                <p>₹170</p>
-            </div>
-            <div>
-                <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mt-5 mb-5" src="./images/9.jpg">
-                <p>Daffodil plant</p>
-                <p>₹140</p>
-            </div>
-            <div>
-                <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mt-5 mb-5" src="./images/10.jpg">
-                <p>Daisy plant</p>
-                <p>₹130</p>
-            </div>
+    <div id="productcontainer" class="grid grid-cols-2 md:grid-cols-4 mt-5 p-5 text-center gap-4">
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/2.jpg" alt="Lily pot">
+        <h1>Lily pot</h1>
+        <p>₹143</p>
+      </div>
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/3.jpg" alt="Snake plant">
+        <h1>Snake plant</h1>
+        <p>₹111</p>
+      </div>
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/6.jpg" alt="Money plant">
+        <h1>Money plant</h1>
+        <p>₹170</p>
+      </div>
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/5.jpg" alt="Spider plant">
+        <h1>Spider plant</h1>
+        <p>₹199</p>
+      </div>
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/7.jpg" alt="Marigold plant">
+        <h1>Marigold plant</h1>
+        <p>₹190</p>
+      </div>
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/8.jpg" alt="Hibiscus plant">
+        <h1>Hibiscus plant</h1>
+        <p>₹170</p>
+      </div>
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/9.jpg" alt="Daffodil plant">
+        <h1>Daffodil plant</h1>
+        <p>₹140</p>
+      </div>
+      <div>
+        <img class="inline hover:shadow-2xl transform hover:-translate-y-2 mb-5" src="./images/10.jpg" alt="Daisy plant">
+        <h1>Daisy plant</h1>
+        <p>₹130</p>
+      </div>
+    </div>
+  </section>
 
-        </div>
-    </section>
-
-    <!--Footer Section-->
-   <section class="bg-green-100 mt-5">
-
+  <!-- Footer -->
+  <section class="bg-green-100 mt-5 text-center p-5">
     <h1 class="font-bold text-4xl">Greenden</h1>
-    <p class="m-5">Trust us we'll provide you unbelievable Quality </p>
-    <p class="m-5">@ 2025 Greenden.com  </p>
-    <p class="m-5">&copy;-Akash</p>
-   </section>
+    <p class="my-2">Trust us, we'll provide you unbelievable quality</p>
+    <p class="my-2">&copy; 2025 Greenden.com</p>
+    <p class="my-2">– Akash</p>
+  </section>
 
+  <script src="product.js"></script>
 </body>
 
 </html>
